@@ -93,11 +93,18 @@ export default function Home() {
     <div className={styles.hello}>
       <p>My first DApp!</p>
 
-      <button className="waveButton" onClick={wave}>
-        Wave at Me
-      </button>
+      <div>Wave count: 0</div>
+      <div>
+        <button className="waveButton" onClick={wave}>
+          Wave at Me
+        </button>
+      </div>
 
-      {!currentAccount && <button onClick={connectWallet}>Connect to account!</button>}
+      {!currentAccount && (
+        <div>
+          <button onClick={connectWallet}>Connect to account!</button>
+        </div>
+      )}
     </div>
   );
 }
